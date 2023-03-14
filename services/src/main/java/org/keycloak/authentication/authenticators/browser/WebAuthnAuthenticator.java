@@ -83,6 +83,8 @@ public class WebAuthnAuthenticator implements Authenticator, CredentialValidator
         WebAuthnPolicy policy = getWebAuthnPolicy(context);
         String rpId = getRpID(context);
         form.setAttribute(WebAuthnConstants.RP_ID, rpId);
+        String appId = getAppID(context);
+        form.setAttribute(WebAuthnConstants.APP_ID, appId);
         form.setAttribute(WebAuthnConstants.CREATE_TIMEOUT, policy.getCreateTimeout());
 
         UserModel user = context.getUser();
@@ -119,6 +121,13 @@ public class WebAuthnAuthenticator implements Authenticator, CredentialValidator
         String rpId = policy.getRpId();
         if (rpId == null || rpId.isEmpty()) rpId = context.getUriInfo().getBaseUri().getHost();
         return rpId;
+    }
+
+    protected String getAppID(AuthenticationFlowContext context){
+        WebAuthnPolicy policy = getWebAuthnPolicy(context);
+        String appId = policy.getAppId();
+        if (appId == null || appId.isEmpty()) appId = context.getUriInfo().getBaseUri().getHost();
+        return appId;
     }
 
     protected String getCredentialType() {

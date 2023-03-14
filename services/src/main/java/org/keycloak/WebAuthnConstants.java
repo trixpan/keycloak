@@ -35,6 +35,7 @@ public interface WebAuthnConstants {
     String RP_ENTITY_NAME = "rpEntityName";
     String SIGNATURE_ALGORITHMS = "signatureAlgorithms";
     String RP_ID = "rpId";
+    String APP_ID = "appId";
     String ATTESTATION_CONVEYANCE_PREFERENCE = "attestationConveyancePreference";
     String AUTHENTICATOR_ATTACHMENT = "authenticatorAttachment";
     String REQUIRE_RESIDENT_KEY = "requireResidentKey";

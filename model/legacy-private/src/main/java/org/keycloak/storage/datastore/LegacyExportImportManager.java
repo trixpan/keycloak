@@ -1167,6 +1167,11 @@ public class LegacyExportImportManager implements ExportImportManager {
             webAuthnPolicyRpId = "";
         webAuthnPolicy.setRpId(webAuthnPolicyRpId);
 
+        String webAuthnPolicyAppId = rep.getWebAuthnPolicyAppId();
+        if (webAuthnPolicyAppId == null || webAuthnPolicyAppId.isEmpty())
+            webAuthnPolicyAppId = "";
+        webAuthnPolicy.setAppId(webAuthnPolicyAppId);
+
         String webAuthnPolicyAttestationConveyancePreference = rep.getWebAuthnPolicyAttestationConveyancePreference();
         if (webAuthnPolicyAttestationConveyancePreference == null || webAuthnPolicyAttestationConveyancePreference.isEmpty())
             webAuthnPolicyAttestationConveyancePreference = Constants.DEFAULT_WEBAUTHN_POLICY_NOT_SPECIFIED;
@@ -1218,6 +1223,11 @@ public class LegacyExportImportManager implements ExportImportManager {
         if (webAuthnPolicyRpId == null || webAuthnPolicyRpId.isEmpty())
             webAuthnPolicyRpId = "";
         webAuthnPolicy.setRpId(webAuthnPolicyRpId);
+
+        String webAuthnPolicyAppId = rep.getWebAuthnPolicyPasswordlessAppId();
+        if (webAuthnPolicyAppId == null || webAuthnPolicyAppId.isEmpty())
+            webAuthnPolicyAppId = "";
+        webAuthnPolicy.setAppId(webAuthnPolicyAppId);
 
         String webAuthnPolicyAttestationConveyancePreference = rep.getWebAuthnPolicyPasswordlessAttestationConveyancePreference();
         if (webAuthnPolicyAttestationConveyancePreference == null || webAuthnPolicyAttestationConveyancePreference.isEmpty())

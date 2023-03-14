@@ -33,6 +33,8 @@ public class WebAuthnPolicy implements Serializable {
     protected List<String> signatureAlgorithms;
     // optional
     protected String rpId;
+    // optional
+    protected String appId;  // used when AppId extension is requested
     protected String attestationConveyancePreference;
     protected String authenticatorAttachment;
     protected String requireResidentKey;
@@ -73,6 +75,14 @@ public class WebAuthnPolicy implements Serializable {
 
     public void setRpId(String rpId) {
         this.rpId = rpId;
+    }
+
+    public String getAppId() {
+        return appId;
+    }
+
+    public void setAppId(String appId) {
+        this.appId = appId;
     }
 
     public String getAttestationConveyancePreference() {

@@ -123,6 +123,8 @@
         let challenge = "${challenge}";
         let userVerification = "${userVerification}";
         let rpId = "${rpId}";
+        let appId = "${appId}";
+
         let publicKey = {
             rpId : rpId,
             challenge: base64url.decode(challenge, { loose: true })
@@ -136,6 +138,8 @@
         }
 
         if (userVerification !== 'not specified') publicKey.userVerification = userVerification;
+
+        if (appId !== '') publicKey.extensions = { appid: appId }
 
         navigator.credentials.get({publicKey})
             .then((result) => {

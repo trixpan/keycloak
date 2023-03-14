@@ -43,6 +43,9 @@ public interface RealmAttributes {
     String WEBAUTHN_POLICY_SIGNATURE_ALGORITHMS = "webAuthnPolicySignatureAlgorithms";
 
     String WEBAUTHN_POLICY_RP_ID = "webAuthnPolicyRpId";
+
+    String WEBAUTHN_POLICY_APP_ID = "webAuthnPolicyAppId";
+
     String WEBAUTHN_POLICY_ATTESTATION_CONVEYANCE_PREFERENCE = "webAuthnPolicyAttestationConveyancePreference";
     String WEBAUTHN_POLICY_AUTHENTICATOR_ATTACHMENT = "webAuthnPolicyAuthenticatorAttachment";
     String WEBAUTHN_POLICY_REQUIRE_RESIDENT_KEY = "webAuthnPolicyRequireResidentKey";

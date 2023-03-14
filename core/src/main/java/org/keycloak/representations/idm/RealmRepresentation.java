@@ -129,6 +129,7 @@ public class RealmRepresentation {
     protected String webAuthnPolicyRpEntityName;
     protected List<String> webAuthnPolicySignatureAlgorithms;
     protected String webAuthnPolicyRpId;
+    protected String webAuthnPolicyAppId;
     protected String webAuthnPolicyAttestationConveyancePreference;
     protected String webAuthnPolicyAuthenticatorAttachment;
     protected String webAuthnPolicyRequireResidentKey;
@@ -142,6 +143,7 @@ public class RealmRepresentation {
     protected String webAuthnPolicyPasswordlessRpEntityName;
     protected List<String> webAuthnPolicyPasswordlessSignatureAlgorithms;
     protected String webAuthnPolicyPasswordlessRpId;
+    protected String webAuthnPolicyPasswordlessAppId;
     protected String webAuthnPolicyPasswordlessAttestationConveyancePreference;
     protected String webAuthnPolicyPasswordlessAuthenticatorAttachment;
     protected String webAuthnPolicyPasswordlessRequireResidentKey;
@@ -1055,8 +1057,16 @@ public class RealmRepresentation {
         return webAuthnPolicyRpId;
     }
 
+    public String getWebAuthnPolicyAppId() {
+        return webAuthnPolicyAppId;
+    }
+
     public void setWebAuthnPolicyRpId(String webAuthnPolicyRpId) {
         this.webAuthnPolicyRpId = webAuthnPolicyRpId;
+    }
+
+    public void setWebAuthnPolicyAppId(String webAuthnPolicyAppId) {
+        this.webAuthnPolicyAppId = webAuthnPolicyAppId;
     }
 
     public String getWebAuthnPolicyAttestationConveyancePreference() {
@@ -1138,8 +1148,16 @@ public class RealmRepresentation {
         return webAuthnPolicyPasswordlessRpId;
     }
 
+    public String getWebAuthnPolicyPasswordlessAppId() {
+        return webAuthnPolicyPasswordlessAppId;
+    }
+
     public void setWebAuthnPolicyPasswordlessRpId(String webAuthnPolicyPasswordlessRpId) {
         this.webAuthnPolicyPasswordlessRpId = webAuthnPolicyPasswordlessRpId;
+    }
+
+    public void setWebAuthnPolicyPasswordlessAppId(String webAuthnPolicyPasswordlessAppId) {
+        this.webAuthnPolicyPasswordlessAppId = webAuthnPolicyPasswordlessAppId;
     }
 
     public String getWebAuthnPolicyPasswordlessAttestationConveyancePreference() {

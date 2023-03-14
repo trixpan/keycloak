@@ -16,16 +16,15 @@
 
 package org.keycloak.credential;
 
-import com.webauthn4j.authenticator.Authenticator;
 import com.webauthn4j.server.ServerProperty;
 import org.keycloak.common.util.Base64;
 
-import com.webauthn4j.data.AuthenticationParameters;
 import com.webauthn4j.data.AuthenticationRequest;
 import com.webauthn4j.data.AuthenticatorTransport;
 import com.webauthn4j.data.attestation.authenticator.AttestedCredentialData;
 import com.webauthn4j.data.attestation.authenticator.COSEKey;
 import com.webauthn4j.data.attestation.statement.AttestationStatement;
+import com.webauthn4j.data.extension.client.AuthenticationExtensionClientInput;
 import org.keycloak.common.util.CollectionUtil;
 
 import java.util.Collections;
@@ -44,6 +43,7 @@ public class WebAuthnCredentialModelInput implements CredentialInput {
     private final String credentialType;
     private String attestationStatementFormat;
     private Set<AuthenticatorTransport> transports;
+    private List<AuthenticationExtensionClientInput> extensions;
 
     public WebAuthnCredentialModelInput(String credentialType) {
         this.credentialType = credentialType;

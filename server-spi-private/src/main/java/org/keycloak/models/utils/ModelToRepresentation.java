@@ -470,6 +470,7 @@ public class ModelToRepresentation {
         rep.setWebAuthnPolicyRpEntityName(webAuthnPolicy.getRpEntityName());
         rep.setWebAuthnPolicySignatureAlgorithms(webAuthnPolicy.getSignatureAlgorithm());
         rep.setWebAuthnPolicyRpId(webAuthnPolicy.getRpId());
+        rep.setWebAuthnPolicyAppId(webAuthnPolicy.getAppId());
         rep.setWebAuthnPolicyAttestationConveyancePreference(webAuthnPolicy.getAttestationConveyancePreference());
         rep.setWebAuthnPolicyAuthenticatorAttachment(webAuthnPolicy.getAuthenticatorAttachment());
         rep.setWebAuthnPolicyRequireResidentKey(webAuthnPolicy.getRequireResidentKey());
@@ -482,6 +483,7 @@ public class ModelToRepresentation {
         rep.setWebAuthnPolicyPasswordlessRpEntityName(webAuthnPolicy.getRpEntityName());
         rep.setWebAuthnPolicyPasswordlessSignatureAlgorithms(webAuthnPolicy.getSignatureAlgorithm());
         rep.setWebAuthnPolicyPasswordlessRpId(webAuthnPolicy.getRpId());
+        rep.setWebAuthnPolicyPasswordlessAppId(webAuthnPolicy.getAppId());
         rep.setWebAuthnPolicyPasswordlessAttestationConveyancePreference(webAuthnPolicy.getAttestationConveyancePreference());
         rep.setWebAuthnPolicyPasswordlessAuthenticatorAttachment(webAuthnPolicy.getAuthenticatorAttachment());
         rep.setWebAuthnPolicyPasswordlessRequireResidentKey(webAuthnPolicy.getRequireResidentKey());

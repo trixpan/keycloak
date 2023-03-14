@@ -53,6 +53,9 @@ public class WebAuthnPolicyPage {
     @FindBy(id = "rpid")
     private WebElement rpEntityId;
 
+    @FindBy(id = "appid")
+    private WebElement rpEntityId;
+
     @FindBy(id = "attpref")
     private Select attestationConveyancePreference;
 

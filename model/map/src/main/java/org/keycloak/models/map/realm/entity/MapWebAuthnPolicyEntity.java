@@ -36,6 +36,7 @@ public interface MapWebAuthnPolicyEntity extends UpdatableEntity {
         entity.setRpEntityName(model.getRpEntityName());
         entity.setSignatureAlgorithms(model.getSignatureAlgorithm());
         entity.setRpId(model.getRpId());
+        entity.setAppId(model.getAppId());
         entity.setAttestationConveyancePreference(model.getAttestationConveyancePreference());
         entity.setAuthenticatorAttachment(model.getAuthenticatorAttachment());
         entity.setRequireResidentKey(model.getRequireResidentKey());
@@ -52,6 +53,7 @@ public interface MapWebAuthnPolicyEntity extends UpdatableEntity {
         model.setRpEntityName(entity.getRpEntityName());
         model.setSignatureAlgorithm(entity.getSignatureAlgorithms());
         model.setRpId(entity.getRpId());
+        model.setAppId(entity.getAppId());
         model.setAttestationConveyancePreference(entity.getAttestationConveyancePreference());
         model.setAuthenticatorAttachment(entity.getAuthenticatorAttachment());
         model.setRequireResidentKey(entity.getRequireResidentKey());
@@ -86,6 +88,9 @@ public interface MapWebAuthnPolicyEntity extends UpdatableEntity {
 
     String getRpId();
     void setRpId(String rpId);
+
+    String getAppId();
+    void setAppId(String appId);
 
     String getAttestationConveyancePreference();
     void setAttestationConveyancePreference(String attestationConveyancePreference);

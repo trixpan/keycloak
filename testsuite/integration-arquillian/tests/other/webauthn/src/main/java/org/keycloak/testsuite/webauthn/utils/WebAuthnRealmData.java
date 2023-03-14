@@ -53,6 +53,10 @@ public class WebAuthnRealmData {
         return isPasswordless ? realm.getWebAuthnPolicyPasswordlessRpId() : realm.getWebAuthnPolicyRpId();
     }
 
+    public String getAppId() {
+        return isPasswordless ? realm.getWebAuthnPolicyPasswordlessAppId() : realm.getWebAuthnPolicyAppId();
+    }
+
     public String getAttestationConveyancePreference() {
         return isPasswordless ? realm.getWebAuthnPolicyPasswordlessAttestationConveyancePreference() : realm.getWebAuthnPolicyAttestationConveyancePreference();
     }

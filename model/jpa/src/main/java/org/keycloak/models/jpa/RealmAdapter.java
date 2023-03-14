@@ -960,6 +960,10 @@ public class RealmAdapter implements LegacyRealmModel, JpaModel<RealmEntity> {
         if (rpId == null || rpId.isEmpty()) rpId = "";
         policy.setRpId(rpId);
 
+        String appId = getAttribute(RealmAttributes.WEBAUTHN_POLICY_APP_ID + attributePrefix);
+        if (appId == null || appId.isEmpty()) appId = "";
+        policy.setAppId(appId);
+
         String attestationConveyancePreference = getAttribute(RealmAttributes.WEBAUTHN_POLICY_ATTESTATION_CONVEYANCE_PREFERENCE + attributePrefix);
         if (attestationConveyancePreference == null || attestationConveyancePreference.isEmpty())
             attestationConveyancePreference = Constants.DEFAULT_WEBAUTHN_POLICY_NOT_SPECIFIED;
@@ -1010,6 +1014,9 @@ public class RealmAdapter implements LegacyRealmModel, JpaModel<RealmEntity> {
         // optional parameters
         String rpId = policy.getRpId();
         setAttribute(RealmAttributes.WEBAUTHN_POLICY_RP_ID + attributePrefix, rpId);
+
+        String AppId = policy.getAppId();
+        setAttribute(RealmAttributes.WEBAUTHN_POLICY_APP_ID + attributePrefix, rpId);
 
         String attestationConveyancePreference = policy.getAttestationConveyancePreference();
         setAttribute(RealmAttributes.WEBAUTHN_POLICY_ATTESTATION_CONVEYANCE_PREFERENCE + attributePrefix, attestationConveyancePreference);
